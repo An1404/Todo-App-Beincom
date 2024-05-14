@@ -4,6 +4,7 @@ import {colors, wp} from '@constants/vars';
 export default StyleSheet.create({
   root: {
     width: '100%',
+    backgroundColor: colors.WHITE,
   },
   row: {
     flexDirection: 'row',

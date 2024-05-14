@@ -4,7 +4,6 @@ import {colors, wp} from '@constants/vars';
 export default StyleSheet.create({
   root: {
     flex: 1,
-    padding: wp(5),
   },
   iconToday: {
     height: wp(6),
@@ -39,5 +38,21 @@ export default StyleSheet.create({
     backgroundColor: colors.WHITE,
     borderRadius: wp(2),
     marginTop: wp(3),
+    overflow: 'hidden',
+  },
+  viewSwipe: {
+    height: '100%',
+    backgroundColor: colors.GRAY,
+    justifyContent: 'center',
+    paddingHorizontal: wp(5),
+  },
+  viewDelete: {
+    backgroundColor: colors.RED,
+  },
+  row: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
   },
 });
