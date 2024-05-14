@@ -1,21 +1,25 @@
-import React, {memo} from 'react';
-import {Text, View} from 'react-native';
-import styles from './styles';
 import {Icon, colors, wp} from '@constants/vars';
-
+import React, {memo} from 'react';
+import {Text, TouchableOpacity, View} from 'react-native';
+import styles from './styles';
 export interface MyListProps {
   name: string;
   total: number;
   color: string;
+  icon: string;
   lastIndex?: boolean;
+  onPress: () => void;
 }
 
 const MyList = (props: MyListProps) => {
-  const {name, total = 0, color, lastIndex} = props;
+  const {name, total = 0, color, icon, lastIndex, onPress} = props;
   return (
-    <View style={[styles.root, styles.row]}>
+    <TouchableOpacity
+      style={[styles.root, styles.row]}
+      activeOpacity={1}
+      onPress={onPress}>
       <View style={[styles.viewIcon, {backgroundColor: color}]}>
-        <Icon.AwesSome5 name="list-ul" size={wp(4)} color={colors.WHITE} />
+        <Icon.MaterialIcons name={icon} size={wp(5)} color={colors.WHITE} />
       </View>
       <View
         style={[
@@ -34,7 +38,7 @@ const MyList = (props: MyListProps) => {
           />
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

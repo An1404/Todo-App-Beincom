@@ -24,6 +24,7 @@ export default StyleSheet.create({
     color: colors.GRAY,
     marginTop: wp(2),
     fontSize: wp(4.5),
+    textTransform: 'capitalize',
   },
   txtTotal: {
     fontSize: wp(8),

@@ -18,6 +18,14 @@ export const colors = {
   GRAY: '#828385',
   BLACK: '#000000',
   GREEN: '#008000',
+  LIGHT_GREEN: '#03BA5E',
+  BACKGROUND_BLUR: '#a2a2a280',
+  LINE_GRAY: '#BCC0C2',
+  RED: '#ff0000',
+  BLUE: '#0000FF',
+  ORANGE: '#FFA500',
+  SKY_BLUE: '#87CEEB',
+  PINK: '#FF8095',
 };
 
 export const Icon = {
@@ -31,3 +39,5 @@ export const Icon = {
 export const wp = (num: number) => widthPercentageToDP(`${num}%`);
 
 export const WIDTH = Dimensions.get('window').width;
+
+export const HIT_SLOP = {top: 10, bottom: 10, left: 10, right: 10};
